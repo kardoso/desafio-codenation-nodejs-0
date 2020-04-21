@@ -18,21 +18,9 @@ const fibonacci = () => {
   return fibonacciNumbers
 }
 
-/// Checks if a number is a fibonacci number
+/// Checks if a number is in the fibonacci list
 const isFibonnaci = (num) => {
-  // calculate expressions
-  const firstExpression = Math.sqrt(5 * Math.pow(num, 2) + 4)
-  const secondExpression = Math.sqrt(5 * Math.pow(num, 2) - 4)
-  // check if expressions return an integer
-  const firstCheck = Number.isInteger(firstExpression)
-  const secondCheck = Number.isInteger(secondExpression)
-
-  // check if any of the expressions is true
-  if (firstCheck || secondCheck) {
-    return true
-  }
-
-  return false
+  return fibonacci().includes(num)
 }
 
 module.exports = {
